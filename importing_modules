@@ -1,0 +1,20 @@
+var http=require('http');
+var date=require("./get_date.js");
+var server=http.createServer(
+function(req,res)
+{
+res.write(date.getDateTime());
+res.end();
+}
+);
+server.listen(8080);
+console.log("Server created Sucessfully...");
+
+
+
+get_date.js
+
+exports.getDateTime=function()
+{
+return Date()
+};
