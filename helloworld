@@ -1,0 +1,9 @@
+var http=require('http');
+var server=http.createServer(
+function(req,res)
+{
+res.write("<h1>hello</h1>");
+res.write("<h1>first program</h1>");
+res.end();
+}).listen(8080);
+console.log("server Created...")
